@@ -33,13 +33,13 @@
     <ClInclude Include="specular.cuh">
       <Filter>Header Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="sphere.cuh">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
     <ClInclude Include="cuda_tools.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
     <ClInclude Include="vector.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
   </ItemGroup>

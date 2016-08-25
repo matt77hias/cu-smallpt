@@ -2,7 +2,7 @@
 #include "cu-smallpt.h"
 
 #include "specular.cuh"
-#include "sphere.cuh"
+#include "sphere.h"
 
 // Scene
 #define REFRACTIVE_INDEX_OUT 1.0
