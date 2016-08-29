@@ -12,7 +12,7 @@ Before Use
 3. Add (or update) <code>REG_DWORD</code> with name <code>TdrDelay</code> and value <code>x</code> seconds (default is 2 seconds)
 4. Reboot Windows
 
-**or* 
+*or* 
 
 **Disable Windows Timeout Detection and Recovery**
 
