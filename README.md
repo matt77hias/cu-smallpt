@@ -20,4 +20,5 @@ Before Use
 2. Goto Nsight Monitor options -> General
 3. Set <code>WDDM TDR enabled</code> to <code>false</code>
 4. Reboot Windows
+
 Also possible via *regedit*
