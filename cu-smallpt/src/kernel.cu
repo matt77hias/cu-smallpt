@@ -124,7 +124,7 @@ __global__ void kernel(const Sphere *dev_spheres, size_t nb_spheres, int w, int 
 				const double dy = u2 < 1 ? sqrt(u2) - 1.0 : 1.0 - sqrt(2.0 - u2);
 				Vector3 d = cx * (((sx + 0.5 + dx) / 2 + x) / w - 0.5) +
 							cy * (((sy + 0.5 + dy) / 2 + y) / h - 0.5) + gaze;
-				L += Radiance(dev_spheres, nb_spheres, Ray(eye + d * 140, d.Normalize(), EPSILON_SPHERE), &state) * (1.0 / nb_samples);
+				L += Radiance(dev_spheres, nb_spheres, Ray(eye + d * 130, d.Normalize(), EPSILON_SPHERE), &state) * (1.0 / nb_samples);
 			}
 			Ls[i] += 0.25 * Clamp(L);
 		}
