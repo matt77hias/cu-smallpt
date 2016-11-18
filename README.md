@@ -1,10 +1,11 @@
 # cpp-smallpt
 
+## About
 CUDA C++ modification of Kevin Baeson's [99 line C++ path tracer](http://www.kevinbeason.com/smallpt/)
 
-Before Use
------------
+<p align="center"><img src="https://github.com/matt77hias/smallpt/blob/master/res/image.png" ></p>
 
+## Before Use
 **Modify Windows Timeout Detection and Recovery**
 
 1. Open *regedit*
