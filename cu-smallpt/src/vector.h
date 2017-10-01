@@ -53,17 +53,16 @@ struct Vector3 {
 		return Vector3(x * inv_a, y * inv_a, z * inv_a);
 	}
 	__device__ friend inline Vector3 operator+(double a, const Vector3 &v) {
-		return Vector3(v.x + a, v.y + a, v.z + a);
+		return Vector3(a + v.x, a + v.y, a + v.z);
 	}
 	__device__ friend inline Vector3 operator-(double a, const Vector3 &v) {
-		return Vector3(v.x - a, v.y - a, v.z - a);
+		return Vector3(a - v.x, a - v.y, a - v.z);
 	}
 	__device__ friend inline Vector3 operator*(double a, const Vector3 &v) {
-		return Vector3(v.x * a, v.y * a, v.z * a);
+		return Vector3(a * v.x, a * v.y, a * v.z);
 	}
 	__device__ friend inline Vector3 operator/(double a, const Vector3 &v) {
-		const double inv_a = 1.0 / a;
-		return Vector3(v.x * inv_a, v.y * inv_a, v.z * inv_a);
+		return Vector3(a / v.x, a / v.y, a / v.z);
 	}
 
 	__device__ inline Vector3 &operator+=(const Vector3 &v) {
