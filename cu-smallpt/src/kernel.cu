@@ -183,7 +183,7 @@ namespace smallpt {
 		// Kernel execution
 		const dim3 nblocks(w / 16, h / 16);
 		const dim3 nthreads(16, 16);
-		kernel << <nblocks, nthreads >> > (dev_spheres, _countof(g_spheres), w, h, dev_Ls, nb_samples);
+		kernel<<<nblocks, nthreads>>>(dev_spheres, _countof(g_spheres), w, h, dev_Ls, nb_samples);
 
 		// Set up host memory
 		Vector3 *Ls = (Vector3 *)malloc(nb_pixels * sizeof(Vector3));

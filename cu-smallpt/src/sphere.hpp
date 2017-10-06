@@ -50,16 +50,16 @@ namespace smallpt {
 			Vector3 &&e, Vector3 &&f, Reflection_t reflection_t) noexcept
 			: m_r(r), m_p(std::move(p)), m_e(std::move(e)), 
 			m_f(std::move(f)), m_reflection_t(reflection_t) {}
-		__host__ __device__ Sphere(const Sphere &sphere) noexcept = default;
-		__host__ __device__ Sphere(Sphere &&sphere) noexcept = default;
-		__host__ __device__ ~Sphere() = default;
+		Sphere(const Sphere &sphere) noexcept = default;
+		Sphere(Sphere &&sphere) noexcept = default;
+		~Sphere() = default;
 
 		//---------------------------------------------------------------------
 		// Assignment Operators
 		//---------------------------------------------------------------------
 
-		__host__ __device__ Sphere &operator=(const Sphere &sphere) = default;
-		__host__ __device__ Sphere &operator=(Sphere &&sphere) = default;
+		Sphere &operator=(const Sphere &sphere) = default;
+		Sphere &operator=(Sphere &&sphere) = default;
 		
 		//---------------------------------------------------------------------
 		// Member Methods

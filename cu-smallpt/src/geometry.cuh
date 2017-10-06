@@ -30,16 +30,16 @@ namespace smallpt {
 			double tmin = 0.0, double tmax = INFINITY, uint32_t depth = 0) noexcept
 			: m_o(std::move(o)), m_d(std::move(d)),
 			m_tmin(tmin), m_tmax(tmax), m_depth(depth) {};
-		__device__ Ray(const Ray &ray) noexcept = default;
-		__device__ Ray(Ray &&ray) noexcept = default;
-		__device__ ~Ray() = default;
+		Ray(const Ray &ray) noexcept = default;
+		Ray(Ray &&ray) noexcept = default;
+		~Ray() = default;
 
 		//---------------------------------------------------------------------
 		// Assignment Operators
 		//---------------------------------------------------------------------
 
-		__device__ Ray &operator=(const Ray &ray) = default;
-		__device__ Ray &operator=(Ray &&ray) = default;
+		Ray &operator=(const Ray &ray) = default;
+		Ray &operator=(Ray &&ray) = default;
 
 		//---------------------------------------------------------------------
 		// Member Methods

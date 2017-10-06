@@ -39,16 +39,16 @@ namespace smallpt {
 			: Vector3(a, a, a) {}
 		__host__ __device__ Vector3(double x, double y, double z) noexcept
 			: m_x(x), m_y(y), m_z(z) {}
-		__host__ __device__ Vector3(const Vector3 &v) noexcept = default;
-		__host__ __device__ Vector3(Vector3 &&v) noexcept = default;
-		__host__ __device__ ~Vector3() = default;
+		Vector3(const Vector3 &v) noexcept = default;
+		Vector3(Vector3 &&v) noexcept = default;
+		~Vector3() = default;
 
 		//---------------------------------------------------------------------
 		// Assignment Operators
 		//---------------------------------------------------------------------
 
-		__host__ __device__ Vector3 &operator=(const Vector3 &v) = default;
-		__host__ __device__ Vector3 &operator=(Vector3 &&v) = default;
+		Vector3 &operator=(const Vector3 &v) = default;
+		Vector3 &operator=(Vector3 &&v) = default;
 
 		//---------------------------------------------------------------------
 		// Member Methods
