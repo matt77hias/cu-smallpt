@@ -19,15 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cu-smallpt\src\cu-smallpt.h" />
-    <ClInclude Include="cu-smallpt\src\cuda_tools.h" />
+    <ClInclude Include="cu-smallpt\src\cu-smallpt.hpp" />
+    <ClInclude Include="cu-smallpt\src\cuda_tools.hpp" />
     <ClInclude Include="cu-smallpt\src\geometry.cuh" />
     <ClInclude Include="cu-smallpt\src\imageio.hpp" />
-    <ClInclude Include="cu-smallpt\src\math_tools.h" />
+    <ClInclude Include="cu-smallpt\src\math_tools.hpp" />
     <ClInclude Include="cu-smallpt\src\sampling.cuh" />
     <ClInclude Include="cu-smallpt\src\specular.cuh" />
-    <ClInclude Include="cu-smallpt\src\sphere.h" />
-    <ClInclude Include="cu-smallpt\src\vector.h" />
+    <ClInclude Include="cu-smallpt\src\sphere.hpp" />
+    <ClInclude Include="cu-smallpt\src\vector.hpp" />
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="cu-smallpt\src\kernel.cu" />
@@ -115,7 +115,7 @@
 copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
     <CudaCompile>
-      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <CodeGeneration>compute_50,sm_50</CodeGeneration>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -135,7 +135,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <CodeGeneration>compute_50,sm_50</CodeGeneration>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -158,7 +158,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
 copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
     <CudaCompile>
-      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <CodeGeneration>compute_50,sm_50</CodeGeneration>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -182,7 +182,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <CodeGeneration>compute_50,sm_50</CodeGeneration>
     </CudaCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

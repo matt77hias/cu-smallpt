@@ -15,25 +15,25 @@
     <ClInclude Include="cu-smallpt\src\imageio.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cu-smallpt\src\math_tools.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="cu-smallpt\src\sampling.cuh">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cu-smallpt\src\specular.cuh">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cu-smallpt\src\sphere.h">
+    <ClInclude Include="cu-smallpt\src\cuda_tools.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cu-smallpt\src\vector.h">
+    <ClInclude Include="cu-smallpt\src\cu-smallpt.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cu-smallpt\src\cuda_tools.h">
+    <ClInclude Include="cu-smallpt\src\math_tools.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cu-smallpt\src\cu-smallpt.h">
+    <ClInclude Include="cu-smallpt\src\sphere.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cu-smallpt\src\vector.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
