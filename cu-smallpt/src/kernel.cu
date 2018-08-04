@@ -148,7 +148,7 @@ namespace smallpt {
 
 				Vector3 L;
 
-				for (size_t s = 0; s < nb_samples; s++) { // samples per subpixel
+				for (size_t s = 0; s < nb_samples; ++s) { // samples per subpixel
 					const double u1 = 2.0 * curand_uniform_double(&state);
 					const double u2 = 2.0 * curand_uniform_double(&state);
 					const double dx = u1 < 1 ? sqrt(u1) - 1.0 : 1.0 - sqrt(2.0 - u1);
