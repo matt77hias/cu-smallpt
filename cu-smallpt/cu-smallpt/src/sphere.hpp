@@ -37,35 +37,38 @@ namespace smallpt {
 	// Declarations and Definitions: Sphere
 	//-------------------------------------------------------------------------
 
-	struct Sphere final {
+	struct Sphere {
 
 		//---------------------------------------------------------------------
 		// Constructors and Destructors
 		//---------------------------------------------------------------------
 
-		__host__ __device__ explicit Sphere(double r, const Vector3 &p,
-			const Vector3 &e, const Vector3 &f, Reflection_t reflection_t) noexcept
-			: m_r(r), m_p(p), m_e(e), m_f(f), m_reflection_t(reflection_t) {}
-		__host__ __device__ explicit Sphere(double r, Vector3 &&p,
-			Vector3 &&e, Vector3 &&f, Reflection_t reflection_t) noexcept
-			: m_r(r), m_p(std::move(p)), m_e(std::move(e)), 
-			m_f(std::move(f)), m_reflection_t(reflection_t) {}
-		Sphere(const Sphere &sphere) noexcept = default;
-		Sphere(Sphere &&sphere) noexcept = default;
+		__host__ __device__ explicit Sphere(double r,
+											Vector3 p,
+											Vector3 e,
+											Vector3 f,
+											Reflection_t reflection_t) noexcept
+			: m_r(r),
+			m_p(std::move(p)),
+			m_e(std::move(e)),
+			m_f(std::move(f)),
+			m_reflection_t(reflection_t) {}
+		Sphere(const Sphere& sphere) noexcept = default;
+		Sphere(Sphere&& sphere) noexcept = default;
 		~Sphere() = default;
 
 		//---------------------------------------------------------------------
 		// Assignment Operators
 		//---------------------------------------------------------------------
 
-		Sphere &operator=(const Sphere &sphere) = default;
-		Sphere &operator=(Sphere &&sphere) = default;
+		Sphere& operator=(const Sphere& sphere) = default;
+		Sphere& operator=(Sphere&& sphere) = default;
 		
 		//---------------------------------------------------------------------
 		// Member Methods
 		//---------------------------------------------------------------------
 
-		__device__ bool Intersect(const Ray &ray) const {
+		__device__ bool Intersect(const Ray& ray) const {
 			// (o + t*d - p) . (o + t*d - p) - r*r = 0
 			// <=> (d . d) * t^2 + 2 * d . (o - p) * t + (o - p) . (o - p) - r*r = 0
 			// 
@@ -84,7 +87,7 @@ namespace smallpt {
 			const double dop = ray.m_d.Dot(op);
 			const double D = dop * dop - op.Dot(op) + m_r * m_r;
 
-			if (D < 0) {
+			if (0.0 > D) {
 				return false;
 			}
 

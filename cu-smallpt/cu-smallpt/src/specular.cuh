@@ -28,33 +28,36 @@ namespace smallpt {
 		return sqrt_R0 * sqrt_R0;
 	}
 
-	__device__ inline double SchlickReflectance(
-		double n1, double n2, double c) {
+	__device__ inline double SchlickReflectance(double n1, 
+												double n2, 
+												double c) {
 		
 		const double R0 = Reflectance0(n1, n2);
 		return R0 + (1.0 - R0) * c * c * c * c * c;
 	}
 
-	__device__ inline const Vector3 IdealSpecularReflect(
-		const Vector3 &d, const Vector3 &n) {
-		
+	__device__ inline const Vector3 IdealSpecularReflect(const Vector3& d, 
+														 const Vector3& n) {
 		return d - 2.0 * n.Dot(d) * n;
 	}
 
-	__device__ inline const Vector3 IdealSpecularTransmit(
-		const Vector3 &d, const Vector3 &n, 
-		double n_out, double n_in, double &pr, curandState *state) {
+	__device__ inline const Vector3 IdealSpecularTransmit(const Vector3& d, 
+														  const Vector3& n, 
+														  double n_out, 
+														  double n_in, 
+														  double& pr, 
+														  curandState* state) {
 		
 		const Vector3 d_Re = IdealSpecularReflect(d, n);
 
-		const bool out_to_in = n.Dot(d) < 0.0;
+		const bool out_to_in = (0.0 > n.Dot(d));
 		const Vector3 nl = out_to_in ? n : -n;
 		const double nn = out_to_in ? n_out / n_in : n_in / n_out;
 		const double cos_theta = d.Dot(nl);
 		const double cos2_phi = 1.0 - nn * nn * (1.0 - cos_theta * cos_theta);
 
 		// Total Internal Reflection
-		if (cos2_phi < 0.0) {
+		if (0.0 > cos2_phi) {
 			pr = 1.0;
 			return d_Re;
 		}

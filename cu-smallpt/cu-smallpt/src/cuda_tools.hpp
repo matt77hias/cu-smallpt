@@ -14,8 +14,8 @@
 //-----------------------------------------------------------------------------
 #pragma region
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 #pragma endregion
 
@@ -24,11 +24,11 @@
 //-----------------------------------------------------------------------------
 namespace smallpt {
 
-	static void HandleError(cudaError_t err, const char *file, int line) {
-		if (err != cudaSuccess) {
-			printf("%s in %s at line %d\n", 
-				cudaGetErrorString(err), file, line);
-			exit(EXIT_FAILURE);
+	inline void HandleError(cudaError_t err, const char* file, int line) {
+		if (cudaSuccess != err) {
+			std::printf("%s in %s at line %d\n", 
+						cudaGetErrorString(err), file, line);
+			std::exit(EXIT_FAILURE);
 		}
 	}
 }
@@ -42,7 +42,7 @@ namespace smallpt {
 
 
 #define HANDLE_NULL(a) {if (a == NULL) { \
-	printf( "Host memory failed in %s at line %d\n", __FILE__, __LINE__ ); \
-    exit( EXIT_FAILURE );}}
+	std::printf( "Host memory failed in %s at line %d\n", __FILE__, __LINE__ ); \
+    std::exit( EXIT_FAILURE );}}
 
 #pragma endregion

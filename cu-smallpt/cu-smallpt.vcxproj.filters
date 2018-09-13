@@ -24,16 +24,13 @@
     <ClInclude Include="cu-smallpt\src\cuda_tools.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cu-smallpt\src\cu-smallpt.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cu-smallpt\src\math_tools.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="cu-smallpt\src\sphere.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cu-smallpt\src\vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cu-smallpt\src\math.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
