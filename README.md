@@ -1,6 +1,9 @@
-[![License][s1]][li]
+[![Code quality][s1]][co] [![License][s2]][li]
 
-[s1]: https://img.shields.io/badge/license-MIT-blue.svg
+[s1]: https://api.codacy.com/project/badge/Grade/512dbb84e3b544869268e449cae67569
+[s2]: https://img.shields.io/badge/license-MIT-blue.svg
+
+[co]: https://www.codacy.com/app/matt77hias/cu-smallpt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=matt77hias/cu-smallpt&amp;utm_campaign=Badge_Grade
 [li]: https://raw.githubusercontent.com/matt77hias/cu-smallpt/master/LICENSE.txt
 
 # cpp-smallpt
